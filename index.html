@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание сайтов для бизнеса</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header>
+    <div class="logo">fiudgin</div>
+<nav>
+    <a href="#home">Главная</a>
+    <a href="#services">Услуги</a>
+    <a href="#about">О нас</a>
+    <a href="#contacts">Контакты</a>
+</nav>
+</header>
+   
+<h1 id="home" class="fog-reveal">Создаём сайты для вашего бизнеса</h1>
+
+<p class="hero-description fog-reveal">
+    Разрабатываем современные и удобные сайты,
+    которые помогают привлекать клиентов и развивать бизнес.
+</p>
+<a href="#contacts" class="hero-button fog-reveal">ОСТАВИТЬ ЗАЯВКУ</a>
+<section class="services" id="services">
+    <h2>Наши услуги</h2>
+    <div class="services-grid">      
+<div class="service-card">
+    <h3>Разработка сайтов</h3>
+    <p>
+        Создаём современные сайты для бизнеса,
+        которые привлекают клиентов
+        и увеличивают продажи.
+    </p>
+</div>   
+<div class="service-card">
+    <h3>Дизайн сайтов</h3>
+    <p>
+        Создаём стильный и удобный дизайн
+        сайтов, который привлекает внимание
+        и вызывает доверие клиентов
+    </p>
+</div>    
+<div class="service-card">
+    <h3>Продвижение сайтов</h3>
+    <p>
+        Помогаем вашему сайту занимать
+        высокие позиции в поисковых
+        системах и привлекать новых
+        клиентов
+    </p>
+</div>
+    </div>
+</section>
+<section class="about fog-reveal" id="about">
+    <h2>О нас</h2>
+<p>
+    Мы — команда специалистов, которая помогает
+    бизнесу развиваться в интернете. Создаём
+    современные сайты, разрабатываем удобный
+    дизайн и помогаем привлекать новых клиентов.
+</p>
+
+<h3>Почему выбирают нас?</h3>
+
+<div class="about-benefits">
+    <p>✓ Индивидуальный подход к каждому клиенту</p>
+    <p>✓ Современный дизайн и качественная разработка</p>
+    <p>✓ Соблюдение сроков и поддержка клиентов</p>
+</div>
+</section>
+<section class="contacts fog-reveal" id="contacts">
+    <h2>Контакты</h2>
+    <p>
+        Есть идея для проекта? Свяжитесь с нами,
+        и мы поможем воплотить её в жизнь!
+<a href="#contact-form" class="contact-button">
+    СВЯЗАТЬСЯ С НАМИ
+</a>  
+<form class="contact-form"
+      id="contact-form"
+      action="https://formspree.io/f/xqpqgazk"
+      method="POST">
+<input type="hidden" name="subject" value="Новая заявка с сайта FIUDGIN">
+    <input type="text" name="name"
+           placeholder="Ваше имя" required>
+<input
+    type="tel"
+    name="phone"
+    placeholder="Ваш телефон"
+    pattern="\+?[0-9]{10,15}"
+    title="Введите от 10 до 15 цифр. Можно добавить + в начале."
+    required
+>
+    <textarea name="message"
+              placeholder="Ваше сообщение"></textarea>
+    <button type="submit">Отправить заявку</button>
+</form>
+</section>
+<footer class="footer">
+    <div class="footer-logo">Fiudgin</div>
+    <p>© 2026 Все права защищены</p>
+</footer>
+
+<script>
+    const cards = document.querySelectorAll('.service-card');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    cards.forEach((card) => {
+        observer.observe(card);
+    });
+</script>
+<script>
+    const fogElements = document.querySelectorAll('.fog-reveal');
+
+    const fogObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                fogObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    fogElements.forEach((element) => {
+        fogObserver.observe(element);
+    });
+</script>
+</body>
+</html>

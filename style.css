@@ -1,0 +1,429 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #111827;
+}
+header {
+    background: linear-gradient(to right, #505050, #A0A0A0);
+    color: white;
+    height: 52px;
+    padding: 0 30px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 16px;
+    font-weight: 500;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 80px 80px 20px;
+    color: #111827;
+}
+.hero-description {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #111827;
+    max-width: 600px;
+    margin: 0 80px 40px;
+}
+.hero-button {
+    display: inline-block;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    margin-left: 80px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.services {
+    padding: 80px 80px;
+}
+.services h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #111827;
+    margin: 0 0 40px;
+}
+.service-card {
+    background-color: #CCCCCC;
+    width: 280px;
+    min-height: 175px;
+    padding: 25px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.service-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 25px;
+    text-align: center;
+}
+.service-card p {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+}
+.services-grid {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.about {
+    padding: 60px 80px;
+    background-color: #FFFFFF;
+}
+.about h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #111827;
+    margin: 0 0 25px;
+}
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4B5563;
+    max-width: 650px;
+    margin: 0;
+}
+.contacts {
+    padding: 80px;
+    background-color: #FFFFFF;
+}
+.contacts h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #111827;
+    margin: 0 0 20px;
+}
+.contacts p {
+    font-size: 16px;
+    color: #4B5563;
+    margin: 0 0 30px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #E5E7EB;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #111827;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.contact-form button {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #1D4ED8;
+}
+.footer {
+    background: linear-gradient(to right, #A0A0A0, #505050);
+    color: #FFFFFF;
+    height: 52px;
+    padding: 0 30px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-logo {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.about h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111827;
+    margin: 40px 0 20px;
+}
+.about-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.about-benefits p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #111827;
+    max-width: none;
+    margin: 0;
+}
+.contact-button {
+    display: table;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.contact-button:hover {
+    background-color: #1D4ED8;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin: 50px 20px 20px;
+    }
+
+    .hero-description {
+        margin: 0 20px 30px;
+    }
+
+    .hero-button {
+        margin-left: 20px;
+    }
+
+    .services,
+    .about,
+    .contacts {
+        padding: 50px 20px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #CCCCCC;
+    z-index: -1;
+
+    clip-path: polygon(
+        0 0,
+        48% 0,
+        48% 48%,
+        0 48%
+    );
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #CCCCCC;
+    z-index: -1;
+
+    clip-path: polygon(
+        52% 52%,
+        100% 52%,
+        100% 100%,
+        52% 100%
+    );
+}
+
+/* Четыре части карточки */
+.service-card {
+    background: linear-gradient(#CCCCCC, #CCCCCC)
+        top left / 50% 50% no-repeat,
+        linear-gradient(#CCCCCC, #CCCCCC)
+        top right / 50% 50% no-repeat,
+        linear-gradient(#CCCCCC, #CCCCCC)
+        bottom left / 50% 50% no-repeat,
+        linear-gradient(#CCCCCC, #CCCCCC)
+        bottom right / 50% 50% no-repeat;
+}
+
+/* Скрываем текст до начала анимации */
+.service-card h3,
+.service-card p {
+    transition: opacity 0.6s ease;
+}
+
+/* Анимация появления карточки */
+@keyframes assembleCard {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) rotate(-5deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05) rotate(1deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+/* Запуск анимации */
+.service-card.animate {
+    animation: assembleCard 1.2s ease forwards;
+}
+
+
+/* Одинаковая анимация шапки и подвала */
+header,
+footer.footer {
+    background-image: linear-gradient(
+        110deg,
+        #777777,
+        #bcbcbc,
+        #eeeeee,
+        #999999,
+        #666666,
+        #bcbcbc
+    );
+
+    background-size: 400% 400%;
+    animation: waveGradient 9s ease-in-out infinite;
+}
+
+
+/* Плавное движение переливов */
+@keyframes waveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Учитываем настройки уменьшения движения */
+@media (prefers-reduced-motion: reduce) {
+    header,
+    footer {
+        animation: none;
+    }
+}
+
+/* Появление элементов из тумана */
+.fog-reveal {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(35px);
+
+    transition:
+        opacity 1.2s ease,
+        filter 1.2s ease,
+        transform 1.2s ease;
+}
+
+/* Туман рассеивается */
+.fog-reveal.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Для пользователей с уменьшенной анимацией */
+@media (prefers-reduced-motion: reduce) {
+    .fog-reveal {
+        opacity: 1;
+        filter: none;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Заголовок появляется первым */
+h1.fog-reveal {
+    transition-delay: 0s;
+}
+
+/* Описание появляется вторым */
+.hero-description.fog-reveal {
+    transition-delay: 0.3s;
+}
+
+/* Кнопка появляется третьей */
+.hero-button.fog-reveal {
+    transition-delay: 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fog-reveal {
+        transition-delay: 0s;
+    }
+}
