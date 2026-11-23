@@ -87,12 +87,14 @@ h1 {
     margin: 0;
     text-align: center;
 }
+
 .services-grid {
-    display: flex;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
     align-items: stretch;
-    flex-wrap: wrap;
 }
+
 .about {
     padding: 60px 80px;
     background-color: #FFFFFF;
@@ -264,49 +266,6 @@ html {
     overflow: hidden;
     isolation: isolate;
 }
-
-.service-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #CCCCCC;
-    z-index: -1;
-
-    clip-path: polygon(
-        0 0,
-        48% 0,
-        48% 48%,
-        0 48%
-    );
-}
-
-.service-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #CCCCCC;
-    z-index: -1;
-
-    clip-path: polygon(
-        52% 52%,
-        100% 52%,
-        100% 100%,
-        52% 100%
-    );
-}
-
-/* Четыре части карточки */
-.service-card {
-    background: linear-gradient(#CCCCCC, #CCCCCC)
-        top left / 50% 50% no-repeat,
-        linear-gradient(#CCCCCC, #CCCCCC)
-        top right / 50% 50% no-repeat,
-        linear-gradient(#CCCCCC, #CCCCCC)
-        bottom left / 50% 50% no-repeat,
-        linear-gradient(#CCCCCC, #CCCCCC)
-        bottom right / 50% 50% no-repeat;
-}
-
 /* Скрываем текст до начала анимации */
 .service-card h3,
 .service-card p {
@@ -425,5 +384,52 @@ h1.fog-reveal {
 @media (prefers-reduced-motion: reduce) {
     .fog-reveal {
         transition-delay: 0s;
+    }
+}
+
+/* Карточки услуг FIUDGIN */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+    margin-top: 35px;
+}
+
+.service-card {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 30px 24px;
+    background: #f3f4f6;
+    border-radius: 18px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.service-card h3 {
+    margin: 0 0 18px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.service-card p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.service-card strong {
+    font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }
